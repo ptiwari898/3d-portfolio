@@ -6,6 +6,7 @@ import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false)
 
   return (
     <nav
@@ -22,7 +23,7 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className=" w-9 h-9 object-contain " />
           <p className="text-white text-[18px] font-bold cursor-pointer">
-            Pawan{" "}
+            Pawan
             <span className=" sm:block hidden">| Front-End Developer </span>
           </p>
         </Link>
@@ -39,8 +40,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div>
-          
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img scr={menu} alt="menu" className="w-[28px} h-[28px] object-contain cursor-pointer" onClick= {() => setToggle} />
         </div>
       </div>
     </nav>
